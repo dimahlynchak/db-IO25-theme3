@@ -9,12 +9,17 @@ footer: "ECL 2.0 Licensed | Copyright © [YYYY] [Your Name]"
 
 **Виконали:** 
 
-*студенти 2-го курсу, групи ІО-25*<span padding-right:5em></span> **Олег Вальваков [Посилання email, tg, fb]**
-**Олег Вальваков [valvakovoleg@gmail.com]**
-**Дмитро Глинчак [dimahlynchak@gmail.com]**
-**Марина Морозюк [marynam60@gmail.com]**
-**Кирил Петренко [pkirill.kp@gmail.com]**
-**Артем Савельєв [saveliev.artem@lll.kpi.ua]**
+*студенти 2-го курсу, групи ІО-25*<span padding-right:5em></span>
+
+**Олег Вальваков [valvakovoleg@gmail.com, @SkAlVol]**
+
+**Дмитро Глинчак [dimahlynchak@gmail.com, @dimahlynchak]**
+
+**Марина Морозюк [marynam60@gmail.com, @maremar9]**
+
+**Кирил Петренко [pkirill.kp@gmail.com, @Kyiv_an]**
+
+**Артем Савельєв [saveliev.artem@lll.kpi.ua, @artesavel]**
 
 
 **Керівник**
