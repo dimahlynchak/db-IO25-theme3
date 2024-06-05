@@ -22,10 +22,10 @@ USE `db-IO25-theme3` ;
 -- Table `db-IO25-theme3`.`Role`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db-IO25-theme3`.`Role` (
-  `id` INT NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   `description` VARCHAR(45) NULL,
-  `permissions` BIT(3) NULL,
+  `permissions` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -34,11 +34,10 @@ ENGINE = InnoDB;
 -- Table `db-IO25-theme3`.`User`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db-IO25-theme3`.`User` (
-  `id` INT NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `email` VARCHAR(45) NULL,
   `password` VARCHAR(45) NULL,
-  `roleid` VARCHAR(45) NULL,
-  `Role_id` INT NOT NULL,
+  `Role_id` INT UNSIGNED NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_user_Role_idx` (`Role_id` ASC) VISIBLE,
   CONSTRAINT `fk_user_Role`
@@ -53,10 +52,10 @@ ENGINE = InnoDB;
 -- Table `db-IO25-theme3`.`Action`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db-IO25-theme3`.`Action` (
-  `id` INT NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   `description` VARCHAR(45) NULL,
-  `User_id` INT NOT NULL,
+  `User_id` INT UNSIGNED NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_Action_user1_idx` (`User_id` ASC) VISIBLE,
   CONSTRAINT `fk_Action_user1`
@@ -71,10 +70,10 @@ ENGINE = InnoDB;
 -- Table `db-IO25-theme3`.`Public request`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db-IO25-theme3`.`Public request` (
-  `id` INT NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   `date` VARCHAR(45) NULL,
-  `Action_id` INT NOT NULL,
+  `Action_id` INT UNSIGNED NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_Public request_Action1_idx` (`Action_id` ASC) VISIBLE,
   CONSTRAINT `fk_Public request_Action1`
@@ -89,10 +88,10 @@ ENGINE = InnoDB;
 -- Table `db-IO25-theme3`.`Media data`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db-IO25-theme3`.`Media data` (
-  `id` INT NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   `fileType` VARCHAR(45) NULL,
-  `Public request_id` INT NOT NULL,
+  `Public request_id` INT UNSIGNED NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_Media data_Public request1_idx` (`Public request_id` ASC) VISIBLE,
   CONSTRAINT `fk_Media data_Public request1`
@@ -107,7 +106,7 @@ ENGINE = InnoDB;
 -- Table `db-IO25-theme3`.`Permission`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db-IO25-theme3`.`Permission` (
-  `id` INT NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
@@ -117,10 +116,10 @@ ENGINE = InnoDB;
 -- Table `db-IO25-theme3`.`Role permissions`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db-IO25-theme3`.`Role permissions` (
-  `id` INT NOT NULL,
-  `Role_id` INT NOT NULL,
-  `Permission_id` INT NOT NULL,
-  PRIMARY KEY (`id`, `Role_id`, `Permission_id`),
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Role_id` INT UNSIGNED NOT NULL,
+  `Permission_id` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`id`),
   INDEX `fk_Role permissions_Role1_idx` (`Role_id` ASC) VISIBLE,
   INDEX `fk_Role permissions_Permission1_idx` (`Permission_id` ASC) VISIBLE,
   CONSTRAINT `fk_Role permissions_Role1`
@@ -139,6 +138,7 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
 ```
 
 

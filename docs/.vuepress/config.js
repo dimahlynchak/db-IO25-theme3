@@ -79,7 +79,7 @@ module.exports = {
     repo: 'https://github.com/IO25SavelievArtem/db-IO25-theme3',
     // Customising the header label
     // Defaults to "GitHub"/"GitLab"/"Bitbucket" depending on `themeConfig.repo`
-    repoLabel: 'Github',
+    repoLabel: 'GitHub',
 
     // Optional options for generating "Edit this page" link
 
@@ -96,7 +96,7 @@ module.exports = {
 
   },
   title: 'Система аналізу медіа-контенту',
-  description: 'Курсова робота з дисципліни "Бази даних"',
+  description: 'Курсова робота з дисципліни "Організація баз даних"',
   configureWebpack: {
     resolve: {
       alias: {

@@ -81,11 +81,11 @@ DataManage .up.> Action :instanceOf
 SearchManage .up.> Action :instanceOf 
 SupportManage .up.> Action :instanceOf
 
-Permision "1.1" -- "0." RolePermissions 
-RolePermissions "0." -- "1.1" Role 
+Permision "1.1" -- "0.*" RolePermissions 
+RolePermissions "0.*" -- "1.1" Role 
 Role "1.1" -right- "0.*" User
-MediaData "0." -- "1.1" PubRequest 
-PubRequest "0." -- "1.1" Action
+MediaData "0.*" -- "1.1" PubRequest 
+PubRequest "0.*" -- "1.1" Action
 Action "0.*" -- "1.1" User
 
 @enduml
@@ -158,11 +158,11 @@ DataManage .up.> Action
 SearchManage .up.> Action
 SupportManage .up.> Action
 
-Permision "1.1" -- "0." RolePermissions
-RolePermissions "0." -- "1.1" Role
+Permision "1.1" -- "0.*" RolePermissions
+RolePermissions "0.*" -- "1.1" Role
 Role "1.1" -- "0.*" User
-MediaData "0." -- "1.1" PubRequest
-PubRequest "0." -- "1.1" Action
+MediaData "0.*" -- "1.1" PubRequest
+PubRequest "0.*" -- "1.1" Action
 Action "0.*" -- "1.1" User
 
 @enduml
